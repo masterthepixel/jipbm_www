@@ -4,6 +4,7 @@ const cssnano = require('cssnano');
 module.exports = (ctx) => {
   return {
     plugins: [
+      require('tailwindcss'),  // - TailwindCSS
       require('autoprefixer'),
       ...ctx.options.env === 'production' ? [
         cssnano({
